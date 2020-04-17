@@ -17,6 +17,8 @@ unlet b:current_syntax
 runtime! syntax/html.vim
 unlet b:current_syntax
 
+syn region  csComment		start="@\*"  end="\*@" contains=@csCommentHook,csTodo,@Spell
+
 syn cluster htmlPreProc add=razorBlock,razorLine
 
 syn match razorLine +@[a-zA-Z0-9_\(\)\.]\++ contains=@aspnetAddCS,razorMixedBlock
