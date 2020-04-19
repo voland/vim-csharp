@@ -13,3 +13,4 @@ au BufNewFile,BufRead *.aspx compiler msbuild | set filetype=aspx.html syntax=as
 au BufNewFile,BufRead *.ascx compiler msbuild | set filetype=aspx.html syntax=aspx
 au BufNewFile,BufRead *.master compiler msbuild | set filetype=aspx.html syntax=aspx
 au BufNewFile,BufRead *.razor compiler msbuild | set filetype=cshtml.html syntax=cshtml
+autocmd BufNewFile,BufRead *.razor   setlocal commentstring=@*\ %s\ *@
