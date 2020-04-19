@@ -24,6 +24,7 @@ syn cluster htmlPreProc add=razorBlock,razorLine
 syn match razorLine +@[a-zA-Z0-9_\(\)\.]\++ contains=@aspnetAddCS,razorMixedBlock
 syn region razorBlock start=+@{+ end=+}+ contains=@aspnetAddCS,@html
 
-syn region razorMixedBlock start="{" end="}" contains=@aspnetAddCS,@html
+syn region razorMixedBlock start="@code" end="}" contains=@aspnetAddCS
+syn region razorMixedBlock start="@functions" end="}" contains=@aspnetAddCS
 
 let b:current_syntax = 'cshtml'
